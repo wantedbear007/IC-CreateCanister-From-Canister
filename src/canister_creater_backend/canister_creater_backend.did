@@ -1,4 +1,4 @@
 service : {
     "greet": (text) -> (text) query;
-    "create": () -> (text);
+    "create": () -> (variant { Ok : text; Err : text });
 }

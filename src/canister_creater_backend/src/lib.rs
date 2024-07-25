@@ -98,7 +98,8 @@ async fn create_canister(
         sender_canister_version: Some(canister_version()),
     };
     let cycles: u128 = 100_000_000_000;
-    call_with_payment128(
+
+     call_with_payment128(
         Principal::management_canister(),
         "create_canister",
         (extended_arg,),
@@ -149,9 +150,12 @@ async fn install_code(arg: InstallCodeArgument) -> CallResult<()> {
 }
 
 #[update]
-pub async fn create() -> Result<(), String> {
-    let data: String = String::from("testing");
+pub async fn create() -> Result<String, String> {
 
+
+    // if you want to pass Init args
+
+    // let data = String::from("hello");
     // let dao_detail_bytes: Vec<u8> = match encode_one(&data) {
     //     Ok(bytes) => bytes,
     //     Err(e) => {
@@ -164,7 +168,7 @@ pub async fn create() -> Result<(), String> {
         Ok(id) => id,
         Err((_, err_string)) => {
             ic_cdk::println!("error in canister id");
-            return Err(err_string);
+            return Err(format!("error ho gya hai bhai / didi: {}", err_string));
         }
     };
 
@@ -180,5 +184,5 @@ pub async fn create() -> Result<(), String> {
     let _installcode = install_code(arg1).await;
     ic_cdk::println!("Canister ID: {:?}", canister_id_principal.to_string());
 
-    Ok(())
+    Ok(format!("canister id: {}", canister_id_principal.to_string()))
 }
