@@ -122,11 +122,11 @@ async fn install_code(arg: InstallCodeArgument) -> CallResult<()> {
     // let wasm_base64: &str = "3831fb07143cd43c3c51f770342d2b7d0a594311529f5503587bf1544ccd44be";
     // let wasm_module_sample: Vec<u8> = base64::decode(wasm_base64).expect("Decoding failed");
 
-    // let wasm_module_sample: Vec<u8> =
-    // //     include_bytes!("../../../../.dfx/local/canisters/ref_canister/ref_canister.wasm").to_vec();
-
     let wasm_module_sample: Vec<u8> =
-    include_bytes!("/home/wantedbear/Desktop/canister/canister_creater/.dfx/local/canisters/ref_canister/ref_canister.wasm").to_vec();
+        include_bytes!("../../../.dfx/local/canisters/ref_canister/ref_canister.wasm").to_vec();
+
+    // let wasm_module_sample: Vec<u8> =
+    // include_bytes!("/home/wantedbear/Desktop/canister/canister_creater/.dfx/local/canisters/ref_canister/ref_canister.wasm").to_vec();
 
 
 
