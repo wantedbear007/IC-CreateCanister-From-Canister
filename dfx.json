@@ -4,6 +4,11 @@
       "candid": "src/canister_creater_backend/canister_creater_backend.did",
       "package": "canister_creater_backend",
       "type": "rust"
+    },
+    "ref_canister": {
+      "candid": "src/ref_canister/ref_canister.did",
+      "package": "ref_canister",
+      "type": "rust"
     }
   },
   "defaults": {

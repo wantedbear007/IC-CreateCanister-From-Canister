@@ -1,5 +1,5 @@
 [package]
-name = "canister_creater_backend"
+name = "ref_canister"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,8 +9,6 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-serde = { version = "1.0.160", features = ["derive"] }
-base64 = "0.13.0"
 candid = "0.10"
 ic-cdk = "0.13"
 ic-cdk-timers = "0.7" # Feel free to remove this dependency if you don't need timers
